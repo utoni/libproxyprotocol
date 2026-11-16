@@ -1,0 +1,49 @@
+Source: libproxyprotocol
+Section: libs
+Priority: optional
+Maintainer: Don Armstrong <don@debian.org>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.2
+Homepage: https://github.com/kosmas-valianos/libproxyprotocol
+Vcs-Browser: https://salsa.debian.org/debian/libproxyprotocol
+Vcs-Git: https://salsa.debian.org/debian/libproxyprotocol.git
+
+Package: libproxyprotocol-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libproxyprotocol1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Development files for the C library to create and parse PROXY protocol v1 and v2
+ libproxyprotocol is an ANSI C library to parse and create PROXY
+ protocol v1 and v2 headers with support for all Type-Length-Values
+ (TLVs) including the custom ones from AWS and Azure
+ .
+ This package contains the development headers and is only needed when
+ building packages which use libproxyprotocol.
+
+Package: libproxyprotocol1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: C library to create and parse PROXY protocol v1 and v2
+ libproxyprotocol is an ANSI C library to parse and create PROXY
+ protocol v1 and v2 headers with support for all Type-Length-Values
+ (TLVs) including the custom ones from AWS and Azure
+ .
+ Easy addition and access to any TLV through API functions when
+ creating or extracting v2 PROXY protocol headers.
+ .
+ Easy way through the API to request a specific alignment, CRC32C
+ checksum when creating v2 PROXY protocol headers.
+ .
+ Easy way through an API function to create health check v2 PROXY
+ protocol headers.
+ .
+ Socket free logic. Does not hook, manipulate, assume any networking.
+ It merely works on buffers.

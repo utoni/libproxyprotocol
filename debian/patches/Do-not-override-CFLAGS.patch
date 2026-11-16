@@ -1,0 +1,21 @@
+From: Don Armstrong <don@debian.org>
+Date: Tue, 2 Jun 2026 21:54:15 -0700
+Subject: Do not override CFLAGS
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 94c89b5..4688668 100644
+--- a/Makefile
++++ b/Makefile
+@@ -16,7 +16,7 @@
+ # along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ #
+ 
+-CFLAGS := -Wall -Wextra -Wshadow -fshort-enums -fpic
++# CFLAGS := -Wall -Wextra -Wshadow -fshort-enums -fpic
+ 
+ all: build tests example
+ 

@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://github.com/kosmas-valianos/libproxyprotocol/issues
+Bug-Submit: https://github.com/kosmas-valianos/libproxyprotocol/issues/new
+Changelog: https://github.com/kosmas-valianos/libproxyprotocol/blob/master/CHANGES
+Documentation: https://github.com/kosmas-valianos/libproxyprotocol/wiki
+Repository-Browse: https://github.com/kosmas-valianos/libproxyprotocol
+Repository: https://github.com/kosmas-valianos/libproxyprotocol.git
